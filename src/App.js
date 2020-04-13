@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import SideBar from "./components/sidebar";
+import Emi_Calculator from "./components/emi_calculator";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="row" style={{ minHeight: "100vh" }}>
+        <div className="col-2 pr-0">
+          <SideBar />
+        </div>
+        <div className="col-10 pl-0">
+          <Switch>
+            <Route path="/emi" exact component={Emi_Calculator} />
+            <Route path="/home" exact component={Home} />
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 

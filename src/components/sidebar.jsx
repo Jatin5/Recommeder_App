@@ -11,6 +11,9 @@ class SideBar extends Component {
         <Link to="/home">
           <div className="sidebar-link">Home</div>
         </Link>
+        <Link to="/screener">
+          <div className="sidebar-link">Screener</div>
+        </Link>
         <Link to="/emi">
           <div className="sidebar-link">EMI Calculator</div>
         </Link>

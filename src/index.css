@@ -38,6 +38,5 @@ code {
 }
 
 .sidebar-link:hover {
-  border-right: 5px solid white;
   background-color: gainsboro;
 }

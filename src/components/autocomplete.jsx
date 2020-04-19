@@ -51,10 +51,12 @@ class Autocomplete extends Component {
     const { suggestions } = this.props;
     const userInput = e.currentTarget.value;
 
-    const filteredSuggestions = suggestions.filter(
+    var filteredSuggestions = suggestions.filter(
       (suggestion) =>
         suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
     );
+
+    filteredSuggestions = filteredSuggestions.slice(0, 9);
 
     this.setState({
       activeSuggestion: 0,
@@ -92,21 +94,28 @@ class Autocomplete extends Component {
         );
       }
     }
+    var value = "Search Stock";
+    if (this.props.favourites.length !== 0) {
+      value = this.props.favourites[0];
+    }
     return (
       <React.Fragment>
-        <label for="stock">
-          <b>Select Stock - </b>
-        </label>
-        <input
-          type="text"
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          value={userInput}
-          className="form-control mb-2"
-          name="stock"
-          id="stock"
-        />
-        {suggestionsListComponent}
+        <form class="searchbox">
+          <label for="stock">
+            <b>Select Stock - </b>
+          </label>
+          <input
+            type="search"
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            value={userInput}
+            className="form-control mb-2"
+            name="stock"
+            id="stock"
+            placeholder={value}
+          />
+          {suggestionsListComponent}
+        </form>
       </React.Fragment>
     );
   }

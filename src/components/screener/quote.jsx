@@ -61,7 +61,7 @@ class Quote extends Component {
             <Autocomplete suggestions={all_securities} />
           </div>
           {this.props.favourites.length !== 0 && (
-            <div>
+            <div className="col-12">
               <p>Security ID -{SecurityId}</p>
               <p>Group Index -{Grp_Index}</p>
               <p>Face Value -{FaceVal}</p>

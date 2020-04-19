@@ -9,15 +9,15 @@ import Quote from "./components/screener/quote";
 function App() {
   return (
     <Router>
-      <div className="row" style={{ minHeight: "100vh" }}>
-        <div className="col-3 pr-0">
+      <div className="row col-12 pr-0" style={{ minHeight: "100vh" }}>
+        <div className="col-2 pr-0 pl-0 border-right">
           <SideBar />
         </div>
-        <div className="col-9 pl-0">
+        <div className="col-10 pl-0 pr-0">
           <Switch>
             <Route path="/emi" exact component={Emi_Calculator} />
             <Route path="/screener" exact component={Quote} />
-            <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
           </Switch>
         </div>
       </div>

@@ -13,7 +13,7 @@ class Emi_Calculator extends Component {
           <button className="btn bg-light">Home</button>
         </nav> */}
         <React.Fragment>
-          <div className="jumbotron">EMI Calculator</div>
+          <div className="titleBar col-12">EMI Calculator</div>
           <div className="col-12">
             <Form />
           </div>

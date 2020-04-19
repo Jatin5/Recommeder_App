@@ -21,16 +21,37 @@ code {
     monospace;
 }
 
+.titleBar {
+  height: 100px;
+  font-size: x-large;
+  padding-top: 2%;
+  color: cadetblue;
+  font-weight: bold;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 175px;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  background-color: darkslateblue;
+}
+
 .sidebar-container {
   min-height: 100%;
-  background-color: lightgray;
+  background-color: linen;
+  /* border-right: 1px dashed black; */
 }
 
 .sidebar {
   justify-content: space-around;
   align-items: center;
-  padding-left: 5%;
-  padding-top: 25px;
+  /* padding-left: 5%;
+  padding-top: 25px; */
 }
 
 .sidebar-link {
@@ -39,4 +60,9 @@ code {
 
 .sidebar-link:hover {
   background-color: gainsboro;
+}
+
+.suggestions {
+  overflow-y: scroll;
+  max-height: 300px;
 }

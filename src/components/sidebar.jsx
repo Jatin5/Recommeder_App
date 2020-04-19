@@ -7,8 +7,8 @@ class SideBar extends Component {
   renderSidebar = () => {
     return (
       <div className="sidebar">
-        <h6>Recco App</h6>
-        <Link to="/home">
+        <div className="sidebar-title">Recco App</div>
+        <Link to="/">
           <div className="sidebar-link">Home</div>
         </Link>
         <Link to="/screener">
